@@ -24,6 +24,8 @@ I'll look to where I can store compiled zips of the library. Currently it's set 
 
 To make this project and demo, I've used the following:
 
-http://nunit.org/
-https://github.com/douglascrockford/JSON-js
-http://jquery.com/
+NUnit: http://nunit.org/
+
+JSON-JS: https://github.com/douglascrockford/JSON-js
+
+JQuery: http://jquery.com/
