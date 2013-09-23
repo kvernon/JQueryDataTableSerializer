@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Similar Browser Example</title>
+        <link type="text/css" href="~/Content/css/jquery.dataTables.css" rel="stylesheet"/>
+        <style type="text/css">
+            table {
+                border: 0;
+                padding: 0;
+                border-spacing: 0;
+            }
+        </style>
+        <script type="text/javascript" src="/Content/js/jquery.js"></script>
+		<script type="text/javascript" src="/Content/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="/Content/js/json2.js"></script>
+		<script type="text/javascript" charset="utf-8">
+		    $(document).ready(function () {
+		        $('#example').dataTable({
+		            "bProcessing": true,
+		            "bServerSide": true,
+		            "sAjaxSource": "Api/BrowsersService/",
+		            "sServerMethod": "POST",
+		            "aoColumns": [
+                        { "mData": "engine" },
+                        { "mData": "browser" },
+                        { "mData": "platform" },
+                        { "mData": "version" },
+                        { "mData": "grade" }
+		            ],
+
+		            "fnServerData": function ( sSource, aoData, fnCallback ) {
+ 
+		                var newData = new Array();
+
+		                if (aoData != null) {
+		                    for (var i = 0, iLen = aoData.length; i < iLen; i++) {
+		                        newData.push({ "key": aoData[i].name, "value": aoData[i].value });
+		                    }
+		                }
+
+		                $.ajax({
+		                    "contentType": "application/json",
+		                    "dataType": 'json', 
+		                    "type": "POST", 
+		                    "url": sSource, 
+		                    "data": JSON.stringify({ "instance": newData }),
+		                    "success": fnCallback
+		                });
+		            }
+		        });
+		    });
+		</script>
+    </head>
+    <body>
+        <table id="example">
+            <thead>
+                <tr>
+                    <th width="20%">Rendering engine</th>
+                    <th width="25%">Browser</th>
+                    <th width="25%">Platform(s)</th>
+                    <th width="15%">Engine version</th>
+                    <th width="15%">CSS grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="dataTables_empty">Loading data from server</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
