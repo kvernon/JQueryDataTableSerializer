@@ -21,3 +21,9 @@ Example Wcf Rest Project:
 There is a demo wcf project here too, WcfServiceDemo.
 
 I'll look to where I can store compiled zips of the library. Currently it's set up for the configuraton for Release to compile the Contracts and Models libraies.
+
+To make this project and demo, I've used the following:
+
+http://nunit.org/
+https://github.com/douglascrockford/JSON-js
+http://jquery.com/
