@@ -14,3 +14,10 @@ It was based off of the popular plug in:
 http://datatables.net/release-datatables/examples/server_side/post.html
 
 I've seen a lot of different approaches, and I thought I'd take the time to work on an updated one. The purpose here is to have these values translate into an object collection, that helps with things like wcf and long url query strings.
+
+
+Example Wcf Rest Project:
+
+There is a demo wcf project here too, WcfServiceDemo.
+
+I'll look to where I can store compiled zips of the library. Currently it's set up for the configuraton for Release to compile the Contracts and Models libraies.
