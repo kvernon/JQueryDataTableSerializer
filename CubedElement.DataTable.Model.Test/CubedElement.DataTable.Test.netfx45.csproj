@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF15BE13-2507-47BE-84BA-282C431A8B2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CubedElement.DataTable.Test</RootNamespace>
+    <AssemblyName>CubedElement.DataTable.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\netfx45\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\netfx45\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\DataCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\WhenUsingConstants\AndDataItemPropertyNamesFrontEnd\AndValidatingFrontEndNames.cs" />
+    <Compile Include="Tests\WhenUsingConstants\AndDataItemCollectionNames\AndValidatingNames.cs" />
+    <Compile Include="Tests\WhenUsingExtensions\AndWorkingWithDictionary\AndIsNull.cs" />
+    <Compile Include="Tests\WhenUsingExtensions\AndWorkingWithDictionary\AndIsEmpty.cs" />
+    <Compile Include="Tests\WhenUsingExtensions\AndWorkingWithDictionary\AndIsPopulated.cs" />
+    <Compile Include="Tests\WhenUsingRequestCollection\AndPopulatedCollectionBool\AndKeysContainPattern.cs" />
+    <Compile Include="Tests\WhenUsingRequestCollection\AndPopulatedCollectionBool\AndKeysDoNotContainPattern.cs" />
+    <Compile Include="Tests\WhenUsingRequestCollection\AndPopulatedCollectionString\AndKeysContainPattern.cs" />
+    <Compile Include="Tests\WhenUsingRequestCollection\AndNoCollection.cs" />
+    <Compile Include="Tests\WhenUsingRequestCollection\AndEmptyCollection.cs" />
+    <Compile Include="Tests\WhenUsingRequestCollection\AndPopulatedCollectionString\AndKeysDoNotContainPattern.cs" />
+    <Compile Include="Tests\WhenUsingRequestCollection\BaseNothingCollection.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestIsEmpty\AndDataCollectionIsNull\AndDataPropertiesPlusEchoAreNull.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestIsEmpty\AndDataCollectionIsNull\AndEchoArePopulated.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestIsEmpty\AndDataCollectionIsNull\AndEchoIsInvaludNumber.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestIsEmpty\AndDataCollectionIsNull\AndDataPropertiesPopulated.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestIsEmpty\AndDataCollectionIsPopulated.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestIsNull\AndDataCollectionIsNull.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestIsNull\AndDataCollectionIsPopulated.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestPopulated\AndDataCollectionPopulated\AndDataPropertiesEmpty.cs" />
+    <Compile Include="Tests\WhenUsingWrapper\AndItemsRequestPopulated\AndDataCollectionPopulated\AndDataPropertiesPopulated.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CubedElement.DataTable.Contracts\CubedElement.DataTable.Contracts.netfx45.csproj">
+      <Project>{23DC2171-B496-40BE-A0F9-74A834B35C87}</Project>
+      <Name>CubedElement.DataTable.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CubedElement.DataTable.Model\CubedElement.DataTable.Model.netfx45.csproj">
+      <Project>{BC6D6862-92CF-45FB-858D-3C7A8AB4BBD0}</Project>
+      <Name>CubedElement.DataTable.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

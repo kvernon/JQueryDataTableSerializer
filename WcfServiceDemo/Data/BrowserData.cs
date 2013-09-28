@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using CubedElement.DataTable.Contracts.Extensions;
 using WcfServiceDemo.Model;
 
@@ -115,8 +114,7 @@ namespace WcfServiceDemo.Data
                                           .GetProperties().First(y => y.Name.ToLower() == columnName)
                                           .GetValue(x).ToString().ToLower()
                                           .Contains(search))
-                             .OrderByDirection(
-                                 m => m.GetType()
+                             .OrderByDirection(m => m.GetType()
                                        .GetProperties()
                                        .First(q => q.Name.ToLower() == columnName)
                                        .GetValue(m), ascSort).ToList();

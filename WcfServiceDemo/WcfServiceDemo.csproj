@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,16 +39,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.ServiceModel.Activation" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
@@ -99,11 +102,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CubedElement.DataTable.Contracts\CubedElement.DataTable.Contracts.csproj">
+    <ProjectReference Include="..\CubedElement.DataTable.Contracts\CubedElement.DataTable.Contracts.netfx45.csproj">
       <Project>{23DC2171-B496-40BE-A0F9-74A834B35C87}</Project>
       <Name>CubedElement.DataTable.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CubedElement.DataTable.Model\CubedElement.DataTable.Model.csproj">
+    <ProjectReference Include="..\CubedElement.DataTable.Model\CubedElement.DataTable.Model.netfx45.csproj">
       <Project>{BC6D6862-92CF-45FB-858D-3C7A8AB4BBD0}</Project>
       <Name>CubedElement.DataTable.Model</Name>
     </ProjectReference>
