@@ -29,3 +29,5 @@ NUnit: http://nunit.org/
 JSON-JS: https://github.com/douglascrockford/JSON-js
 
 JQuery: http://jquery.com/
+
+Rhino mocks: http://hibernatingrhinos.com/oss/rhino-mocks
