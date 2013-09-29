@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>JQueryDataTableSerializer</id>
+	<title>JQuery DataTables Serializer</title>
+    <version>1.0.0.1</version>
+    <authors>Kelly Vernon</authors>
+    <owners>Kelly Vernon</owners>
+    <licenseUrl>https://github.com/kvernon/JQueryDataTableSerializer/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/kvernon/JQueryDataTableSerializer/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A small framework for the serialization of the popular JQuery DataTables Plug-in. There are two small libraries, CubedElement.DataTable.Contracts and CubedElement.DataTable.Model, and when building this the goal was not only to make it user friendly, but to make it n-tiered and IoC friendly too!</description>
+    <copyright>Copyright 2013</copyright>
+	<tags>javascript jquery serialization datacontract datacontracts datamember datamembers datatables datatables.net wcf web-api mvc mvvm</tags>
+	<releaseNotes>Version 1.0.0.0
+	* first release with unit tested items and demo project (at project site)
+	* currently targeted for .net 4 and .net 4.5
+	</releaseNotes>
+  </metadata>
+  <files>
+  	  <file src="CubedElement.DataTable.Model\bin\Release\netfx4\CubedElement.DataTable.Model.xml" target="lib\net4\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx4\CubedElement.DataTable.Model.dll" target="lib\net4\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx4\CubedElement.DataTable.Model.pdb" target="lib\net4\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx4\CubedElement.DataTable.Contracts.xml" target="lib\net4\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx4\CubedElement.DataTable.Contracts.dll" target="lib\net4\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx4\CubedElement.DataTable.Contracts.pdb" target="lib\net4\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx45\CubedElement.DataTable.Model.xml" target="lib\net45\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx45\CubedElement.DataTable.Model.dll" target="lib\net45\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx45\CubedElement.DataTable.Model.pdb" target="lib\net45\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx45\CubedElement.DataTable.Contracts.xml" target="lib\net45\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx45\CubedElement.DataTable.Contracts.dll" target="lib\net45\" />
+	  <file src="CubedElement.DataTable.Model\bin\Release\netfx45\CubedElement.DataTable.Contracts.pdb" target="lib\net45\" />
+	</files>
+</package>
